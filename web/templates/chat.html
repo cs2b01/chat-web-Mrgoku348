@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="chat.js"></script>
+    <style>
+        .cheight {
+            position: relative;
+            top: 1em;
+            height: 50em;
+            margin: 0px;
+            padding: 0px;
+        }
+        .cheight>div {
+            border: 1px solid;
+        }
+        .messages {
+            height: 46em;
+        }
+        .search {
+            height: 4em;
+            border-top: 1px solid;
+        }
+        .search form {
+            margin-left: 1em;
+            margin-right: 1em;
+            width: 100%;
+        }
+        .entrada {
+            height: 2.1em;
+        }
+        #allusers {
+            height: 43.5em;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body onload="whoami()">
+
+<div class="col-12 row cheight">
+    <div class="col-3">
+        <div class="alert alert-primary" role="alert">
+            <label id="cu_username"></label>
+            <br/>
+            <label id="cu_name"></label>
+        </div>
+        <div id="allusers"></div>
+    </div>
+    <div class="col-9">
+        <div class="row messages"></div>
+        <div class="row search align-items-center">
+            <form class="row">
+                <input type="text" id="postmessage" class="entrada col-10"/>
+                <input type="button" onclick="sendMessage()" value="Enviar" class="entrada col-2">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

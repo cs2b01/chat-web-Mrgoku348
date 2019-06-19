@@ -1,0 +1,29 @@
+.cheight {
+    position: relative;
+    top: 1em;
+    height: 50em;
+    margin: 0px;
+    padding: 0px;
+}
+.cheight>div {
+    border: 1px solid;
+}
+.messages {
+    height: 46em;
+}
+.search {
+    height: 4em;
+    border-top: 1px solid;
+}
+.search form {
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 100%;
+}
+.entrada {
+    height: 2.1em;
+}
+#allusers {
+    height: 43.5em;
+    overflow-y: scroll;
+}
