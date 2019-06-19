@@ -14,6 +14,7 @@ function whoami(){
                 $('#cu_name').html(name);
                 allusers();
             },
+
             error: function(response){
                 alert(JSON.stringify(response));
             }
@@ -78,7 +79,11 @@ function whoami(){
             data : data,
             dataType:'json',
             success: function(response){
-                alert(JSON.stringify(response));
+                info = JSON.parse(data);
+                messa = '<div class="row col-12"><div class="col-12"><p>'+ info.content + '</p></div></div>';
+                if(info.content != " "){
+                    $('#messajes').append(messa);
+                }
             },
             error: function(response){
                 alert(JSON.stringify(response));

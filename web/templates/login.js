@@ -12,7 +12,7 @@ function getData(){
         $.ajax({
             url:'/authenticate',
             type:'POST',
-            contentType: 'application/json',
+            contentType: 'application/json',.
             data : message,
             dataType:'json',
             success: function(response){
